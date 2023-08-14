@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "971957874444",
+    "project_id": "gestion-de-flotte-ed799",
+    "storage_bucket": "gestion-de-flotte-ed799.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971957874444:android:f9379e276a10a83f252329",
+        "android_client_info": {
+          "package_name": "com.example.gestion_de_flotte_mobile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971957874444-jimv0t2rcjd3i1bpkn7bl4lkp8a6auie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMgt-tt-cmuY37oQSTvQ5cNoheDDmjvF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971957874444-jimv0t2rcjd3i1bpkn7bl4lkp8a6auie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
