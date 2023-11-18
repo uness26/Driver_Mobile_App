@@ -61,6 +61,7 @@ class _PlanningPageState extends State<PlanningPage> {
                           },
                           child: MissionCard(
                               id: data.id!,
+                              heureDep: data.heureDep,
                               date: data.date,
                               depart: data.lieuDep,
                               destination: data.lieuArr),

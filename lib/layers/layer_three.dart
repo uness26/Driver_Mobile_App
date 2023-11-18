@@ -82,12 +82,13 @@ class _LayerThreeState extends State<LayerThree> {
                 child: SizedBox(
                   width: 310,
                   child: TextField(
+                    obscureText: true,
                     controller: passwordController,
                     decoration: InputDecoration(
                       border: const UnderlineInputBorder(),
                       hintText: 'Entrer votre mot de passe',
                       hintStyle: const TextStyle(color: hintText),
-                      errorText: _isNotValidate ? "Enter Proper Info" : null,
+                      errorText: _isNotValidate ? "Identifiants invalides, veuillez réessayer" : null,
                     ),
                   ),
                 )),
@@ -106,20 +107,20 @@ class _LayerThreeState extends State<LayerThree> {
               top: 380,
               right: 40,
               child: Container(
-                width: 99,
-                height: 35,
+                width: 120,
+                height: 50,
                 decoration: const BoxDecoration(
                   color: Colors.indigo,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20)),
+                      topLeft: Radius.circular(25),
+                      bottomRight: Radius.circular(25)),
                 ),
                 child: MaterialButton(
                   onPressed: () {
                     loginUser();
                   },
                   child: const Text(
-                    "Sign In",
+                    "Connecter",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.white,

@@ -22,7 +22,7 @@ class SocketManager {
       });
 
       _socket!.connect();
-      _socket!.onConnect((data ) {
+      _socket!.onConnect((data) {
         print('Connected to the server: ${_socket!.id}');
         _socket!.emit("joinRoom", {
           "chauffeurID": userProvider.user.id.toString(),
@@ -31,12 +31,17 @@ class SocketManager {
         });
       });
 
-      _socket!.on("editEtat", (data) {
-        print('Your Reclamation Statut is changed to $data');
+      _socket!.on("addMission", (data) {
+        print(data);
         Provider.of<NotificationProvider>(context, listen: false)
             .incrementNotificationCount();
-        showNotification(
-            context, 'Your Reclamation Statut is changed to $data');
+        showNotification(context, data);
+      });
+
+      _socket!.on("editEtat", (data) {
+        Provider.of<NotificationProvider>(context, listen: false)
+            .incrementNotificationCount();
+        showNotification(context, data);
       });
 
       _socket!.onDisconnect((_) => print('Connection Disconnection'));

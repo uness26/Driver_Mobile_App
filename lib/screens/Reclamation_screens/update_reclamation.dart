@@ -52,7 +52,7 @@ class _UpdateReclamationState extends State<UpdateReclamation> {
                       Container(
                         padding: const EdgeInsets.all(20),
                         child: const Text(
-                          'Réclamation : ',
+                          'Modification : ',
                           style: TextStyle(
                               fontSize: 30,
                               fontWeight: FontWeight.bold,
@@ -98,7 +98,7 @@ class _UpdateReclamationState extends State<UpdateReclamation> {
                               children: [
                                 Radio(
                                   activeColor: Colors.indigo,
-                                  value: 'Abcense',
+                                  value: 'Absence',
                                   groupValue: selectedType,
                                   onChanged: (value) {
                                     setState(() {
@@ -107,7 +107,7 @@ class _UpdateReclamationState extends State<UpdateReclamation> {
                                   },
                                 ),
                                 const Text(
-                                  'Abcense',
+                                  'Absence',
                                   style: TextStyle(
                                       color: Colors.black45,
                                       fontWeight: FontWeight.w600),
@@ -210,7 +210,7 @@ class _UpdateReclamationState extends State<UpdateReclamation> {
                                   description: textController.text);
                             },
                             child: const Text(
-                              "Enregistrer",
+                              "Mettre à jour",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,

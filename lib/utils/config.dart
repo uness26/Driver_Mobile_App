@@ -16,7 +16,7 @@ const Color inputBorder = Color(0xFF707070);
 
 /* API URLS */
 
-const url = "http://192.168.56.1:5000/";
+const url = "http://1.0.2.2:5000/";
 const login = '${url}users/login';
 const logout = '${url}users/logout';
 const userData = '${url}users/me';

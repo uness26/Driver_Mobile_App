@@ -14,26 +14,27 @@ class NotificationCard extends StatefulWidget {
 class _NotificationCardState extends State<NotificationCard> {
   @override
   Widget build(BuildContext context) {
-
-    return Padding(
-      padding: const EdgeInsets.only(top: 0),
-      child: Card(
-          elevation: 5,
-          shadowColor: Colors.black,
-          child: SizedBox(
-            height: 80,
-            child: Row(
-              children: [
-                const Icon(
-                  Icons.circle_notifications_rounded,
-                  size: 40,
-                  color: Colors.grey,
-                ),
-                const SizedBox(width: 10),
-                Expanded(child: Text( widget.message, style: const TextStyle(fontSize: 20))),
-              ],
-            ),
-          )),
-    );
+    return Card(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        elevation: 5,
+        shadowColor: Colors.black,
+        color: Colors.blueGrey[100]?.withOpacity(1),
+        child: SizedBox(
+          height: 80,
+          child: Row(
+            children: [
+              const Icon(
+                Icons.circle_notifications_rounded,
+                size: 40,
+                color: Colors.white,
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                  child: Text(widget.message,
+                      style: const TextStyle(fontSize: 20))),
+            ],
+          ),
+        ));
   }
 }

@@ -5,6 +5,7 @@ class MissionCard extends StatefulWidget {
       {Key? key,
       required this.id,
       required this.date,
+      required this.heureDep,
       required this.depart,
       required this.destination})
       : super(key: key);
@@ -12,6 +13,7 @@ class MissionCard extends StatefulWidget {
   final String date;
   final String depart;
   final String destination;
+  final String heureDep;
 
   @override
   State<MissionCard> createState() => _MissionCardState();
@@ -24,26 +26,25 @@ class _MissionCardState extends State<MissionCard> {
       padding: const EdgeInsets.all(3),
       child: Card(
         color: Colors.indigo[400],
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
               widget.date,
-              style: const TextStyle(color: Colors.white, fontSize: 22),
+              style: const TextStyle(color: Colors.white, fontSize: 20),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   widget.depart,
-                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                  style: const TextStyle(fontSize: 22, color: Colors.white),
                 ),
                 const Icon(Icons.arrow_downward),
                 Text(
                   widget.destination,
-                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                  style: const TextStyle(fontSize: 22, color: Colors.white),
                 ),
               ],
             )

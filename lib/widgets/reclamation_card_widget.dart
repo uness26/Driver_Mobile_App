@@ -24,7 +24,8 @@ class _ReclamationCardState extends State<ReclamationCard> {
       child: Card(
           color: Colors.indigo[400],
           shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),                elevation: 10,
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          elevation: 10,
           shadowColor: Colors.black,
           child: Container(
             height: 150,

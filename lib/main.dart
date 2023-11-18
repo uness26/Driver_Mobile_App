@@ -9,20 +9,18 @@ import 'package:gestion_de_flotte_mobile_app/services/auth_service.dart';
 import 'package:provider/provider.dart';
 import 'providers/notification_provider.dart';
 import 'providers/user_provider.dart';
-import 'screens/mission_screens/planning_screen.dart';
 
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
-
   print("Handling a background message: $message");
 }
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
   // Retrieve and print the FCM token
   FirebaseMessaging.instance
       .getToken()

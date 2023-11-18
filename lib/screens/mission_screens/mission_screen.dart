@@ -45,7 +45,7 @@ class _MissionPageState extends State<MissionPage> {
                 Container(
                   padding: const EdgeInsets.all(20),
                   child: const Text(
-                    'Informations : ',
+                    'Détails : ',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,

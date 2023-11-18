@@ -52,5 +52,5 @@ void showNotification(BuildContext context, String message) {
   );
 
   overlay.insert(overlayEntry);
-  Future.delayed(const Duration(seconds: 5), () => overlayEntry.remove());
+  Future.delayed(const Duration(seconds: 10), () => overlayEntry.remove());
 }
